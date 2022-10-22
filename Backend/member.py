@@ -20,6 +20,7 @@ def memberadd():
     print("Enter the date in sequence of MM-DD-YYYY")
     d=(input("Enter the date:"))
 
+
     dat=datetime.strptime(d, '%m-%d-%Y')  #strptime function in python converts string into datetime objects
     
     

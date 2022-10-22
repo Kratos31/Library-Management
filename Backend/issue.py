@@ -1,4 +1,5 @@
 import mysql.connector as i
+
 from datetime import datetime
 
 
@@ -16,8 +17,8 @@ def viewissues():
 
 def issuebook():
     iid=input("Enter issue ID:")
-    mmid=input("Enter member id:")
-    bc=input("Enter the book code:")
+    mmid=input("Enter member ID:")
+    bc=input("Enter the book ID:")
     
     B=(bc,)
 
@@ -26,7 +27,7 @@ def issuebook():
     c.execute(sql,B)
     res=c.fetchall()
     
-    if 'Y' in res[0]:
+    if 'Y' and 'y' in res[0]:
         adate=input("Enter book issue date (MM-DD-YYYY):")
         bdate=input("Enter due date(MM-DD-YYYY):")
         idate=datetime.strptime(adate, '%m-%d-%Y')
