@@ -35,7 +35,7 @@ def deletebook():
     c.execute(sql,B)
     res=c.fetchall()
     
-    if 'Y' and 'y' in res[0]:
+    if 'Y' and 'y' and 'N' and 'n' in res[0]:
         
         B=(bc,)
         sq=("delete from books where B_ID=%s")

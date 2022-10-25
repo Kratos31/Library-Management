@@ -3,6 +3,8 @@ from Backend.issue import *
 from Backend.member import *
 
 
+    
+    
 def main():
     print("1. Enter Book menu(1)")
     print("2. Enter Library-member menu(2)")
@@ -30,8 +32,8 @@ def bookm():
     print("To view books(1):")
     print("To add book(2):")
     print("To Delete Book(3)")
-    
-    
+
+
     an=input("Enter your response here:")
 
     if an=='1':
@@ -52,8 +54,9 @@ def bookm():
 
 def ishmen():
     print("View issue database(1):")
-    print("Issue a book(2)")
-    
+    print("Issue a book(2):")
+    print("To Delete a Entry(3):")
+
     an=input("Enter your response here:")
 
     if an=='1':
@@ -64,7 +67,11 @@ def ishmen():
         print("--------------------You are in Create Issue menu--------------------")
         issuebook()
         main()
-    
+    elif an=='3':
+        print("---------------------You are in the entry deletion menu----------------------------")
+        deleteissue()
+        main()
+
     else:
         print("Invalid input")
         main()
@@ -87,5 +94,4 @@ def memmen():
         main()
 
 
-    
 main()

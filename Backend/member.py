@@ -28,7 +28,7 @@ def memberadd():
 
     ader=input("Enter your address:")
 
-    wr=input("Enter if you are a user or staff:")
+    wr=input("Enter if you are a student or staff:")
     
     data=(mi,n,dat,phno,ader,wr)
     print(data)
@@ -38,3 +38,16 @@ def memberadd():
     log.commit()
 
     print("Member added successfully")
+
+def removemem():
+    bc=input("Enter the Member ID:")
+    try:
+      B=(bc,)
+      sq=("delete from issue where Mem_ID=%s")
+      c=log.cursor()
+      c.execute(sq,B)
+      log.commit()
+      print("Successfully Deleted the Entry.")
+    except:
+        print("Either issue number is incorrect or there is no book issued by the given Issue ID")
+    deleteissue()
