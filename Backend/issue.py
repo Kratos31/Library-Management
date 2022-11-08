@@ -46,11 +46,7 @@ def issuebook():
             print("Book issued successfully!")
             
             
-            data=(B)
-            sq=("update books set B_Avilable= replace(B_Avilable, 'Y','N') where B_ID=%s")
-            c=log.cursor()
-            c.execute(sq,data)
-            log.commit()
+            
         else:
             print("Either book isnt avilable or code is wrong:")
             issuebook()
